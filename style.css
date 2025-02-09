@@ -19,7 +19,6 @@ header {
     margin: auto;
 }
 
-/* Name and Contact Links */
 .name-section {
     display: flex;
     flex-direction: column;
@@ -392,39 +391,56 @@ button:hover {
     }
 
     button {
-        padding: 10px 18px; /* Adjust button size for smaller screens */
+        padding: 10px 18px; 
     }
 }@media (max-width: 768px) {
     .recommendation-form {
         padding: 20px;
-        max-width: 90%; /* Take up more space on smaller screens */
+        max-width: 90%; 
     }
 
     #recommendation-input,
     #author-input {
-        padding: 12px; /* Slightly reduce padding for smaller screens */
+        padding: 12px; 
         width: 300px;
     }
 
     button {
-        padding: 10px 18px; /* Adjust button size for smaller screens */
+        padding: 10px 18px;
     }
 }
 
 @media (max-width: 480px) {
     .recommendation-form {
         padding: 15px;
-        max-width: 95%; /* Allow the form to take almost full width */
+        max-width: 95%; 
     }
 
     #recommendation-input,
     #author-input {
-        font-size: 0.9rem; /* Reduce font size for smaller screens */
+        font-size: 0.9rem; 
         width: 180px;
     }
 
     button {
-        font-size: 0.9rem; /* Adjust button text size */
-        padding: 10px 16px; /* Further adjust button size */
+        font-size: 0.9rem; 
+        padding: 10px 16px; 
+    }
+}
+@media (max-width: 300px) {
+    .recommendation-form {
+        padding: 15px;
+        max-width: 95%; 
+    }
+
+    #recommendation-input,
+    #author-input {
+        font-size: 0.9rem; 
+        width: 100px;
+    }
+
+    button {
+        font-size: 0.9rem; 
+        padding: 10px 16px; 
     }
 }
