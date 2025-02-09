@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohamed Aziz Jallali - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="name-section">
+                <h1>Mohamed Aziz Jallali</h1>
+                <div class="contact-links">
+                    <a href="mailto:azizjallali.99@gmail.com">
+                        <i class="fas fa-envelope"></i> azizjallali.99@gmail.com
+                    </a>
+                    <a href="https://www.linkedin.com/in/mohamed-aziz-jallali-534b88233/" target="_blank">
+                        <i class="fab fa-linkedin"></i> LinkedIn Profile
+                    </a>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#recommendations">Recommendations</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="profile">
+            <img src="profile-image.png" alt="Profile Picture" class="profile-img">
+            <div class="profile-text">
+                <p>
+                    I am currently pursuing a degree in Software Engineering at Polytech Intl. I specialize in creating innovative and high-performance applications. With a strong analytical mindset and problem-solving skills, I aim to contribute actively to ambitious web projects, bringing my expertise and sense of innovation to every challenge.
+                </p>
+                <h3>Contact Info</h3>
+                <ul>
+                    <li>Phone: +21651147163</li>
+                    <li>Email: <a href="mailto:azizjallali.99@gmail.com">azizjallali.99@gmail.com</a></li>
+                    <li>LinkedIn: <a href="https://www.linkedin.com/in/mohamed-aziz-jallali-534b88233/" target="_blank">LinkedIn Profile</a></li>
+                    <li>Location: Hammam Chott, Ben Arous</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-list">
+            <div class="skill">
+                <h3>Programming Languages</h3>
+                <p>Java, Python, C, C++, SQL, Bash, PL/SQL, PHP</p>
+            </div>
+            <div class="skill">
+                <h3>Frameworks</h3>
+                <p>Laravel, Angular, React, Springboot, JEE, Flutter</p>
+            </div>
+            <div class="skill">
+                <h3>Database Management</h3>
+                <p>Oracle, MySQL, Firebase (NoSQL)</p>
+            </div>
+            <div class="skill">
+                <h3>Version Control</h3>
+                <p>Git, Docker, GitHub</p>
+            </div>
+            <div class="skill">
+                <h3>Methodologies</h3>
+                <p>Agile, Scrum</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Media Social Platform</h3>
+            <p>
+                I developed a mobile application using Flutter and Firebase for sharing video content about social issues in Tunisia. The project involved implementing authentication, real-time database management, and cloud storage using Firebase services.
+            </p>
+        </div>
+        <div class="project">
+            <h3>Internal Archives Management System</h3>
+            <p>
+                During my internship at the Official Printing House of the Tunisian Republic, I built a web platform for managing the company's internal archives. I used Laravel for backend development and JavaScript/jQuery for frontend interactivity.
+            </p>
+        </div>
+        <div class="project">
+            <h3>Anime Recommendation System</h3>
+            <p>
+                Created a recommendation system for anime using SVD (Singular Value Decomposition) and collaborative filtering, utilizing a dataset from Kaggle. I applied machine learning techniques, data visualization, and Python programming for this project.
+            </p>
+        </div>
+    </section>
+
+    <section id="recommendations" class="section">
+        <h2>Recommendations</h2>
+        <div class="recommendations-container" id="recommendations-container">
+            <!-- Existing Recommendations will be displayed here -->
+        </div>
+    
+        <!-- Add New Recommendation Form -->
+        <div class="recommendation-form">
+            <h3>Submit a Recommendation</h3>
+            <form id="recommendation-form">
+                <textarea id="recommendation-input" placeholder="Write your recommendation here..." required></textarea>
+                <input type="text" id="author-input" placeholder="Your Name" required>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+    
+    
+    <footer>
+        <div class="container">
+            <p>Mohamed Aziz Jallali © 2025</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
