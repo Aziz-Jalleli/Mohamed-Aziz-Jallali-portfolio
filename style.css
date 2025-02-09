@@ -435,7 +435,7 @@ button:hover {
         padding: 10px 16px; 
     }
     h2 {
-        font-size: 1.6rem; 
+        font-size: 1.0rem; 
     }
 
     h3 {
@@ -446,6 +446,9 @@ button:hover {
     .recommendation-form {
         padding: 15px;
         max-width: 95%; 
+    }
+    h2 {
+        font-size: 1.0rem; 
     }
 
     #recommendation-input,
