@@ -1,129 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohamed Aziz Jallali - Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mohamed Aziz Jallali — Software Engineer</title>
+<meta name="description" content="Portfolio of Mohamed Aziz Jallali: software engineering student, full-stack and ML developer.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700&family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="container header-container">
-            <div class="name-section">
-                <h1>Mohamed Aziz Jallali</h1>
-                <div class="contact-links">
-                    <a href="mailto:azizjallali.99@gmail.com">
-                        <i class="fas fa-envelope"></i> azizjallali.99@gmail.com
-                    </a>
-                    <a href="https://www.linkedin.com/in/mohamed-aziz-jallali-534b88233/" target="_blank">
-                        <i class="fab fa-linkedin"></i> LinkedIn Profile
-                    </a>
-                </div>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#recommendations">Recommendations</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    
 
-    <section id="about">
-        <h2>About Me</h2>
-        <div class="profile">
-            <img src="https://raw.githubusercontent.com/Aziz-Jalleli/Mohamed-Aziz-Jallali-portfolio/refs/heads/main/profile-image.PNG" alt="Profile Picture" class="profile-img">
-            <div class="profile-text">
-                <p>
-                    I am currently pursuing a degree in Software Engineering at Polytech Intl. I specialize in creating innovative and high-performance applications. With a strong analytical mindset and problem-solving skills, I aim to contribute actively to ambitious web projects, bringing my expertise and sense of innovation to every challenge.
-                </p>
-                <h3>Contact Info</h3>
-                <ul>
-                    <li>Phone: +21651147163</li>
-                    <li>Email: <a href="mailto:azizjallali.99@gmail.com">azizjallali.99@gmail.com</a></li>
-                    <li>LinkedIn: <a href="https://www.linkedin.com/in/mohamed-aziz-jallali-534b88233/" target="_blank">LinkedIn Profile</a></li>
-                    <li>Location: Hammam Chott, Ben Arous</li>
-                </ul>
-            </div>
-        </div>
-    </section>
+<!-- BOOT SCREEN -->
+<div id="boot">
+  <div class="boot-inner">
+    <pre id="boot-log"></pre>
+    <div class="boot-bar"><span id="boot-fill"></span></div>
+    <div id="boot-pct">0%</div>
+  </div>
+</div>
 
-    <!-- Skills Section -->
-    <section id="skills">
-        <h2>Skills</h2>
-        <div class="skills-list">
-            <div class="skill">
-                <h3>Programming Languages</h3>
-                <p>Java, Python, C, C++, SQL, Bash, PL/SQL, PHP</p>
-            </div>
-            <div class="skill">
-                <h3>Frameworks</h3>
-                <p>Laravel, Angular, React, Springboot, JEE, Flutter</p>
-            </div>
-            <div class="skill">
-                <h3>Database Management</h3>
-                <p>Oracle, MySQL, Firebase (NoSQL)</p>
-            </div>
-            <div class="skill">
-                <h3>Version Control</h3>
-                <p>Git, Docker, GitHub</p>
-            </div>
-            <div class="skill">
-                <h3>Methodologies</h3>
-                <p>Agile, Scrum</p>
-            </div>
-        </div>
-    </section>
+<canvas id="space"></canvas>
+<div id="cursor"></div><div id="cursor-ring"></div>
+<div class="scanlines"></div>
 
-    <!-- Projects Section -->
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project">
-            <h3>Media Social Platform</h3>
-            <p>
-                I developed a mobile application using Flutter and Firebase for sharing video content about social issues in Tunisia. The project involved implementing authentication, real-time database management, and cloud storage using Firebase services.
-            </p>
-        </div>
-        <div class="project">
-            <h3>Internal Archives Management System</h3>
-            <p>
-                During my internship at the Official Printing House of the Tunisian Republic, I built a web platform for managing the company's internal archives. I used Laravel for backend development and JavaScript/jQuery for frontend interactivity.
-            </p>
-        </div>
-        <div class="project">
-            <h3>Anime Recommendation System</h3>
-            <p>
-                Created a recommendation system for anime using SVD (Singular Value Decomposition) and collaborative filtering, utilizing a dataset from Kaggle. I applied machine learning techniques, data visualization, and Python programming for this project.
-            </p>
-        </div>
-    </section>
+<!-- HUD -->
+<aside id="hud">
+  <div class="hud-top">
+    <span class="logo">AZ<b>.</b>J</span>
+    <span class="hud-status"><i></i> OPEN TO INTERNSHIPS</span>
+  </div>
+  <nav id="sectors">
+    <a href="#hero" data-s="hero"><span>00</span><em>Origin</em></a>
+    <a href="#log" data-s="log"><span>01</span><em>Mission Log</em></a>
+    <a href="#lab" data-s="lab"><span>02</span><em>The Lab</em></a>
+    <a href="#skills" data-s="skills"><span>03</span><em>Skill Sphere</em></a>
+    <a href="#creds" data-s="creds"><span>04</span><em>Credentials</em></a>
+    <a href="#signals" data-s="signals"><span>05</span><em>Signals</em></a>
+    <a href="#terminal" data-s="terminal"><span>06</span><em>Terminal</em></a>
+  </nav>
+  <div class="hud-bottom">
+    <div class="telemetry">
+      <div>DEPTH <b id="t-depth">0000</b> ly</div>
+      <div>SECTOR <b id="t-sector">ORIGIN</b></div>
+    </div>
+    <div class="progress"><span id="prog"></span></div>
+  </div>
+</aside>
 
-    <section id="recommendations" class="section">
-        <h2>Recommendations</h2>
-        <div class="recommendations-container" id="recommendations-container">
-        </div>
-    
-        <div class="recommendation-form">
-            <h3>Submit a Recommendation</h3>
-            <form id="recommendation-form">
-                <textarea id="recommendation-input" placeholder="Write your recommendation here..." required></textarea>
-                <input type="text" id="author-input" placeholder="Your Name" required>
-                <button type="submit">Submit</button>
-            </form>
-        </div>
-    </section>
-    
-    
-    <footer>
-        <div class="container">
-            <p>Mohamed Aziz Jallali © 2025</p>
-        </div>
-    </footer>
+<main>
 
-    <script src="script.js"></script>
+<!-- 00 ORIGIN -->
+<section id="hero" class="sector">
+  <div class="hero-grid">
+    <div>
+      <p class="mono kicker">// SECTOR 00 — ORIGIN</p>
+      <h1 class="glitch" data-text="MOHAMED AZIZ JALLALI">MOHAMED AZIZ JALLALI</h1>
+      <p class="role">I build <span id="typed"></span><span class="caret">|</span></p>
+      <p class="lead">Software Engineering student at Polytech Intl. I design robust full-stack systems and teach machines to find patterns — from Spring Boot backends to semantic-matching ML services.</p>
+      <div class="cta">
+        <a href="#log" class="btn">Begin the flight ↓</a>
+        <a href="#terminal" class="btn ghost">Open terminal</a>
+      </div>
+      <div class="stats">
+        <div><b data-count="4">0</b><span>Internships</span></div>
+        <div><b data-count="7">0</b><span>Shipped projects</span></div>
+        <div><b data-count="3">0</b><span>Certifications</span></div>
+        <div><b data-count="3">0</b><span>Languages</span></div>
+      </div>
+    </div>
+    <div class="portrait tilt">
+      <img src="https://raw.githubusercontent.com/Aziz-Jalleli/Mohamed-Aziz-Jallali-portfolio/refs/heads/main/profile-image.PNG" alt="Mohamed Aziz Jallali">
+      <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+      <div class="tag mono">ID: AZ-JALLALI // TN</div>
+    </div>
+  </div>
+  <div class="scroll-hint mono">scroll to fly ↓</div>
+</section>
+
+<!-- 01 MISSION LOG -->
+<section id="log" class="sector">
+  <header class="sec-head"><p class="mono kicker">// SECTOR 01</p><h2>Mission Log</h2><p class="sub">Four internships. Each one is a waypoint on the flight path.</p></header>
+  <div class="flightpath" id="flightpath"></div>
+</section>
+
+<!-- 02 THE LAB -->
+<section id="lab" class="sector">
+  <header class="sec-head"><p class="mono kicker">// SECTOR 02</p><h2>The Lab</h2><p class="sub">Projects as specimens. Filter by discipline, click a card to inspect it.</p></header>
+  <div class="filters" id="filters">
+    <button class="chip active" data-f="all">ALL</button>
+    <button class="chip" data-f="ai">AI / ML</button>
+    <button class="chip" data-f="web">WEB</button>
+    <button class="chip" data-f="mobile">MOBILE</button>
+  </div>
+  <div class="lab-grid" id="lab-grid"></div>
+</section>
+
+<!-- 03 SKILLS -->
+<section id="skills" class="sector">
+  <header class="sec-head"><p class="mono kicker">// SECTOR 03</p><h2>Skill Sphere</h2><p class="sub">Move your mouse to rotate. Hover a node to see its group.</p></header>
+  <div class="skills-wrap">
+    <div id="sphere"></div>
+    <div class="skill-legend" id="skill-legend"></div>
+  </div>
+</section>
+
+<!-- 04 CREDENTIALS -->
+<section id="creds" class="sector">
+  <header class="sec-head"><p class="mono kicker">// SECTOR 04</p><h2>Credentials</h2><p class="sub">Education, certifications and languages.</p></header>
+  <div class="creds-grid">
+    <div class="panel tilt">
+      <h3 class="mono">EDUCATION</h3>
+      <div class="edu"><b>Cycle Ingénieur en Génie Logiciel</b><span>École Polytechnique Internationale (Polytech Intl)</span><em>2024 — present</em></div>
+      <div class="edu"><b>Licence en Informatique : Génie Logiciel et Système d'Information</b><span>ISTIC — Institut Supérieur des Technologies de l'Information et des Communications</span><em>2020 — 2023</em></div>
+      <h3 class="mono" style="margin-top:28px">LANGUAGES</h3>
+      <div class="langs">
+        <div><span>Arabic</span><i style="--w:100%"></i><em>Native</em></div>
+        <div><span>French</span><i style="--w:85%"></i><em>Fluent</em></div>
+        <div><span>English</span><i style="--w:85%"></i><em>Fluent</em></div>
+      </div>
+    </div>
+    <div class="certs">
+      <div class="cert tilt"><span class="mono">2021</span><h4>IBM Big Data Engineer — Mastery Award</h4><p>Big Data methodologies with IBM Watson Studio and open-source tools. Validated on Hadoop, Spark, MapReduce, HDFS, YARN, HBase, Big SQL and ZooKeeper.</p></div>
+      <div class="cert tilt"><span class="mono">NOV 2025</span><h4>Fundamentals of Deep Learning — NVIDIA</h4><p>Neural networks, model training, backpropagation, and modern frameworks for building and evaluating deep learning models.<br><small class="mono">ID: MO6M0CV7RA2bPpBs2U4PIA</small></p></div>
+      <div class="cert tilt"><span class="mono">CERTIPORT</span><h4>IT Specialist — Java</h4><p>Designing, writing and debugging Java code: OOP, control structures, classes, methods and error handling. Delivered via Pearson VUE.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 SIGNALS -->
+<section id="signals" class="sector">
+  <header class="sec-head"><p class="mono kicker">// SECTOR 05</p><h2>Incoming Signals</h2><p class="sub">Recommendations from people I've worked with.</p></header>
+  <div class="signals" id="signals-list"></div>
+  <form id="signal-form" class="panel">
+    <h3 class="mono">TRANSMIT A RECOMMENDATION</h3>
+    <textarea id="signal-text" placeholder="Write your message..." required maxlength="400"></textarea>
+    <div class="row">
+      <input type="text" id="signal-author" placeholder="Your name" required maxlength="60">
+      <button type="submit" class="btn">Transmit →</button>
+    </div>
+    <p class="mono note">Stored locally in your browser (demo). Connect a backend to make it public.</p>
+  </form>
+</section>
+
+<!-- 06 TERMINAL -->
+<section id="terminal" class="sector">
+  <header class="sec-head"><p class="mono kicker">// SECTOR 06</p><h2>Terminal</h2><p class="sub">Type <code>help</code>. Or just use the buttons below.</p></header>
+  <div class="term">
+    <div class="term-bar"><i></i><i></i><i></i><span class="mono">aziz@portfolio:~</span></div>
+    <div class="term-body" id="term-body"></div>
+    <div class="term-input"><span class="mono">$</span><input id="term-in" type="text" autocomplete="off" spellcheck="false" placeholder="type a command..."></div>
+  </div>
+  <div class="contact-links">
+    <a class="btn" href="mailto:azizjallali.99@gmail.com">✉ azizjallali.99@gmail.com</a>
+    <a class="btn ghost" href="https://www.linkedin.com/in/mohamed-aziz-jallali-534b88233/" target="_blank" rel="noopener">in LinkedIn</a>
+    <a class="btn ghost" href="tel:+21651147163">☎ +216 51 147 163</a>
+  </div>
+  <footer class="mono">© 2026 Mohamed Aziz Jallali — Hammam Chott, Ben Arous, Tunisia</footer>
+</section>
+
+</main>
+
+<!-- PROJECT MODAL -->
+<div id="modal"><div class="modal-card">
+  <button id="modal-close" aria-label="Close">✕</button>
+  <p class="mono kicker" id="m-kind"></p>
+  <h3 id="m-title"></h3>
+  <ul id="m-points"></ul>
+  <div class="tags" id="m-tags"></div>
+</div></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
